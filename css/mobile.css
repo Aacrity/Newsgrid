@@ -1,0 +1,59 @@
+/* navigation bar */
+
+#main-nav .social {
+    display: none;
+}
+#main-nav .container {
+     grid-template-columns: 1fr;
+     grid-gap: 1.3rem;
+}  
+#main-nav ul {
+    justify-self: left;
+}
+#main-nav  .logo {
+    justify-self: center;
+}  
+#main-nav ul li a {
+    padding: 0.5rem;
+    
+}
+/*section  */
+#home-articles .articles-container {
+   
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+#home-articles .articles-container article:first-child,
+#home-articles .articles-container article:last-child {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+@media (max-width: 600px) {
+    #showcase .showcase-container, 
+    #home-articles .articles-container,
+    .footer-container  {
+        grid-template-columns: 1fr;
+    }
+    /* tyo copyright lai hamle column span gareko theu so 
+    aba span hataunu parcha ani balla stack huncha in single column */
+    .footer-container > *:last-child {
+        grid-column: 1;
+    } 
+    .footer-container > *:first-child, 
+    .footer-container > *:nth-child(2) {
+    
+        border-bottom: rgb(243, 239, 239) dotted 1px;
+        padding-bottom: 1rem;
+    }
+    .page-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .page-container > *:first-child {
+        grid-row: 1;
+    }
+    .l-heading {
+        font-size: 2rem;
+    }
+}
